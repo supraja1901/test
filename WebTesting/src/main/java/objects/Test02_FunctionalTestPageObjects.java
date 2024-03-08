@@ -25,7 +25,7 @@ public class Test02_FunctionalTestPageObjects extends Base {
 	@FindBy(xpath = "//button[@type='submit']")
 	WebElement Login;
 
-	@FindBy(xpath = "//div[@class='css-sukebr']/button")
+	@FindBy(xpath = "//button[contains(@class,'MuiButtonBase-root has-submenu compactNavItem')]")
 	WebElement Order;
 
 	@FindBy(xpath = "//a[@href='/mis/orders']")

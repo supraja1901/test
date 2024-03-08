@@ -2,6 +2,7 @@ package resources;
 
 import java.io.File;
 import java.text.SimpleDateFormat;
+import java.time.Duration;
 import java.util.Date;
 
 import org.openqa.selenium.OutputType;
@@ -21,7 +22,7 @@ public class Base {
 
 	@BeforeMethod
 	@Parameters("browser")
-	public void setUp(@Optional("chrome") String browser) {
+	public WebDriver setUp(@Optional("chrome") String browser) {
 		// Initialize WebDriver based on the specified browser
 		switch (browser.toLowerCase()) {
 		case "chrome":
@@ -35,6 +36,8 @@ public class Base {
 		default:
 			throw new IllegalArgumentException("Invalid browser specified");
 		}
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+		return driver;
 
 	}
 
