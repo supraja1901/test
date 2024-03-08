@@ -10,6 +10,7 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.safari.SafariDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
@@ -32,6 +33,7 @@ public class Base {
 			driver = new FirefoxDriver();
 			break;
 		case "safari":
+			driver = new SafariDriver();
 			break;
 		default:
 			throw new IllegalArgumentException("Invalid browser specified");

@@ -19,9 +19,9 @@ public class Test01_UIPageObjects extends Base {
 	}
 
 	@FindBy(xpath = "//table[@id='sitemap']/tbody/tr/td/a")
-	List<WebElement> LinkUrl;
+	List<WebElement> LinkUrls;
 
-	public List<WebElement> LinkUrl() {
-		return LinkUrl;
+	public List<WebElement> LinkUrls() {
+		return LinkUrls;
 	}
 }
