@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<<<<<<< Updated upstream
 <suite name="Suite" parallel="tests" thread-count="5">
 	
 	<test name="TestsInChrome">
@@ -26,3 +27,13 @@
 		</classes>
 	</test>
 </suite>
+=======
+<suite name="Suite">
+  <test thread-count="5" name="Test">
+    <classes>
+      <class name="DealsDrayTestCases.test01_UITest"/>
+      <class name="DealsDrayTestCases.Test02_FunctionalTestCase"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
+>>>>>>> Stashed changes
